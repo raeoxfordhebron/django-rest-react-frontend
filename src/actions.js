@@ -34,7 +34,7 @@ export async function UpdateAction ({request, params}){
 
     // request to create route in backend
     await fetch(url + params.id +"/", {
-        method: "post",
+        method: "put",
         headers: {
             "Content-Type": "application/json"
         },
