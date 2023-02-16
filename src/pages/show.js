@@ -19,8 +19,11 @@ const Show = (props) => {
             <input type="text" name="subject" placeholder="subject" defaultValue={post.subject}/>
             <input type="text" name="details" placeholder="details" defaultValue={post.details}/>
             <button>Update To-Do</button>
-        </Form>
+            </Form>
         </div>
+        <Form action={`/delete/${post.id}`} method="post">
+            <button>Delete To-Do</button>
+        </Form>
         <Link to="/"><button>Go Back</button></Link>
     </div>
 }

@@ -42,3 +42,15 @@ export async function UpdateAction ({request, params}){
     })
     return redirect("/")
 }
+
+export async function DeleteAction ({params}){
+    // get the id
+    const id = params.id
+
+    //send request to delete
+    await fetch(url + id + "/", {
+        method: "delete"
+    }
+    )
+    return redirect("/")
+}
