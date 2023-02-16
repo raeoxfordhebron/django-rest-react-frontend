@@ -5,6 +5,7 @@ const Index = (props) => {
     const todos = useLoaderData()
     console.log(todos)
     return <> 
+    {todos.map((post) => <Post key={post.id} post={post}/>)}
     <div style={{textAlign: "center"}}>
         <h2>Create a To-do</h2>
         <Form action="/create" method="post">
@@ -13,8 +14,6 @@ const Index = (props) => {
             <button>Create New To-do</button>
         </Form>
     </div>
-    {todos.map((post) => <Post key={post.id} post={post}/>)}
-    
     </>
 }
 

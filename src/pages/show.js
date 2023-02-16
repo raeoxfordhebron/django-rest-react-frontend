@@ -1,5 +1,4 @@
 import { Link, useLoaderData } from "react-router-dom"
-import { ShowLoader } from "../loaders"
 
 const Show = (props) => {
     const post = useLoaderData()
